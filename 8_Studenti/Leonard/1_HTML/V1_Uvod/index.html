@@ -6,7 +6,8 @@
     <meta name="author" content="Leonard" />
     <meta name="description" content="Exercise 2. Working with text." />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Working with text.</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML</title>
   </head>
   <body>
     <header>
@@ -251,6 +252,236 @@
     height="200px"
     style="border: 2px solid black"
   ></canvas>
+  <canvas
+    id="myCanvas6"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <h2>Video</h2>
+  <video
+    src="../../../../2_HTML/Vjezba5_AV/mountains.mp4"
+    width="720px"
+    height="400px"
+    controls
+  ></video>
+  <video controls width="720px" height="400px">
+    <source
+      src="../../../../2_HTML/Vjezba5_AV/mountains.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="../../../../2_HTML/Vjezba5_AV/mountains.webm"
+      type="video/webm"
+    />
+    <p>Vas preglednik ne podrzava video</p>
+  </video>
+  <h2>Audio</h2>
+  <audio src="../../../../2_HTML/Vjezba5_AV/in3s.mp3" controls></audio>
+  <audio controls>
+    <source src="../../../../2_HTML/Vjezba5_AV/in3s.mp3" />
+    <p>Ne moze reproducirati</p>
+  </audio>
+  <h2>Links</h2>
+  <nav>
+    <ul>
+      <li><a href="#p1">Section 1</a></li>
+      <li><a href="#p2">Section 2</a></li>
+      <li><a href="#p3">Section 3</a></li>
+    </ul>
+  </nav>
+  <p id="p1">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique corrupti
+    ex optio totam maiores perspiciatis in obcaecati iste mollitia asperiores
+    minus consectetur porro alias deleniti rerum, illum vero tempore. Nam
+    tempora nisi a pariatur officiis distinctio quod, vero perspiciatis,
+    excepturi corrupti doloremque obcaecati aliquam voluptas consequatur
+    numquam, quae rem vitae. Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Voluptatibus exercitationem numquam necessitatibus nemo porro harum
+    saepe ea, maiores unde libero eum ipsum eos repellendus, voluptate nostrum,
+    a quam architecto repellat quo facere velit quibusdam aperiam. Dolorem optio
+    cumque, consectetur, quos quidem distinctio accusamus dolorum odio tempora
+    ad possimus deleniti nisi!
+  </p>
+  <a href="#">Go to the start</a>
+  <p id="p2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit optio
+    cupiditate quo animi vitae ullam cum molestias veniam, possimus quam
+    impedit! Explicabo beatae ipsam consequatur recusandae dolorum odio cum eius
+    earum ex laudantium, nulla aliquid debitis animi suscipit cupiditate quae
+    vero pariatur laboriosam. Ipsam reprehenderit ullam doloremque ut, dolorum
+    ad fugiat dicta molestiae recusandae modi magni in at! Blanditiis impedit
+    quo nisi corporis tempora iste id placeat dolorum qui laudantium? Ea
+    perspiciatis nemo repudiandae, quibusdam exercitationem odio inventore et?
+    Dolorum?
+  </p>
+  <a href="#">Go to the start</a>
+  <p id="p3">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+    delectus tempora eligendi aut asperiores voluptatem natus fugiat
+    accusantium! Et perferendis debitis fugit eaque atque ut suscipit cupiditate
+    quam tempora iusto in amet quia, hic fugiat magni voluptates libero tenetur!
+    Laborum blanditiis repudiandae labore praesentium, vero autem aspernatur
+    beatae aliquid expedita. Dolorem enim autem aperiam ut corporis incidunt
+    repellat veritatis harum quos delectus quis cum molestiae, ratione deserunt
+    voluptatem perferendis fugiat nostrum doloribus alias assumenda quisquam
+    explicabo facilis. Ipsum quisquam eos rerum delectus nam odio distinctio
+    illo sequi dolores facere laudantium porro quos ab, ratione inventore
+    laboriosam deleniti ex numquam itaque. Voluptatem debitis odio culpa ipsa,
+    totam maiores illo iste ex aliquam, modi alias quia non eum cum eaque
+    tempore tempora officia voluptatibus maxime delectus distinctio? Vero sit
+    accusantium tempore suscipit reiciendis odit rerum consequuntur, quaerat
+    totam est tempora commodi facere at soluta maiores error fugiat quae
+    debitis, consequatur nemo! Veritatis sapiente, odit tempore animi hic
+    reprehenderit possimus quam sint laboriosam nihil nesciunt deleniti quidem
+    tempora. A dolores vero sapiente doloremque quam adipisci aspernatur quidem
+    eligendi iste iure labore beatae molestiae sunt et, cum distinctio
+    perspiciatis expedita ex repudiandae impedit magnam quis veniam? Tempore
+    voluptas optio, nisi illum rem exercitationem unde!
+  </p>
+  <a href="#">Go to the start</a>
+  <a href="../../../../2_HTML/Vjezba6_Linkovi/Primjer1/index.html"
+    >Other exercise</a
+  >
+  <p>
+    Find out what
+    <a href="https://www.algebra.hr/sveuciliste/" target="_blank">links</a> are.
+  </p>
+  <h2>Tables</h2>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Redni broj</th>
+        <th>Ime i prezime</th>
+        <th>Zanimanje</th>
+        <th>Osvojeni bodovi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.</td>
+        <td>Maja Majic</td>
+        <td>Web designer</td>
+        <td>98</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Pero Peric</td>
+        <td>Mailman</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Mirko Mirkowski</td>
+        <td>Polititian</td>
+        <td>75</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Ivan Ivancevic</td>
+        <td>Student</td>
+        <td>70</td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <tr>
+      <td colspan="3">Red 1</td>
+    </tr>
+    <tr>
+      <td>2 - 1</td>
+      <td>2 - 2</td>
+      <td>2 - 2</td>
+    </tr>
+    <tr>
+      <td>3 - 1</td>
+      <td>3 - 2</td>
+      <td>3 - 3</td>
+    </tr>
+  </table>
+  <h2>Forms</h2>
+  <form action="" method="">
+    <div>
+      <label for="ime">Ime i prezime:</label>
+      <input
+        type="text"
+        name="ime"
+        id="ime"
+        maxlength="20"
+        size="15"
+        placeholder="Ime i prezime"
+      />
+    </div>
+    <div>
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="mail" />
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="099/123-1234"
+        pattern="[0-9]{3}/[0-9]{3}-[0-9]{4}"
+      />
+    </div>
+    <div>
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" size="10" maxlength="8" />
+    </div>
+    <div>
+      <label for="color">Color</label>
+      <input type="color" name="color" id="color" />
+    </div>
+    <div>
+      <label for="o1">Ocjena firme</label>
+      <input type="radio" name="01" id="o1" value="1" />
+      <input type="radio" name="01" id="o2" value="2" />
+      <input type="radio" name="01" id="o3" value="3" />
+      <input type="radio" name="01" id="o4" value="4" />
+    </div>
+    <div>
+      <label for="doc">Odaberite dokument:</label>
+      <input type="file" name="doc" id="doc" />
+    </div>
+    <div>
+      <label for="date">Odaberite datum:</label>
+      <input type="date" name="date" id="date" />
+    </div>
+  </form>
+  <form action="">
+    <label for="ime"></label>
+    <input type="text" name="ime" id="ime" />
+    <label for="prezime"></label>
+    <input type="text" name="prezime" id="prezime" />
+  </form>
+  <h2>Strukturiranje</h2>
+  <div id="header">Zaglavlje</div>
+  <div id="main">Glavni dio</div>
+  <div id="footer">Podnozje</div>
+  <h2>Strukturiranje 2</h2>
+  <header>Zaglavlje</header>
+  <nav>Navigacija</nav>
+  <main>
+    Glavni dio
+    <section>Sekcija stranice</section>
+    <article>Cjelina neovisnog, samostalnog sadrzaja</article>
+    <aside>Aside</aside>
+  </main>
+  <footer>Podnozje</footer>
   <script>
     // canvas1
     let canvasEl = document.getElementById(`myCanvas1`);
@@ -278,22 +509,25 @@
     ctx3.stroke();
 
     // canvas 4
-    let canvasEl4 = document.getElementById(`myCanvas3`);
+    let canvasEl4 = document.getElementById(`myCanvas4`);
     let ctx4 = canvasEl4.getContext(`2d`);
-    let centerX = canvasEl4 / 2;
-    let centerY = canvasEl4 / 2;
+    let centerX = canvasEl4.width / 2;
+    let centerY = canvasEl4.height / 2;
     let radius = 80;
 
     ctx4.beginPath();
     ctx4.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-    ctx4.fillStyle = `black`;
+    ctx4.fillStyle = `salmon`;
     ctx4.lineWidth = 5;
     ctx4.fill();
     ctx4.stroke();
 
-    // canvas 4
+    // canvas 5
     let canvasEl5 = document.getElementById(`myCanvas5`);
     let ctx5 = canvasEl5.getContext(`2d`);
+    ctx5.font = `italic bold 60px 'Courier New'`;
+    ctx5.fillStyle = `salmon`;
+    ctx5.fillText(`Pozdrav svima!`, 50, 100);
 
     ctx5.beginPath();
     ctx5.moveTo(170, 80);
@@ -302,10 +536,20 @@
     ctx5.bezierCurveTo(420, 150, 420, 120, 390, 100);
     ctx5.bezierCurveTo(430, 40, 370, 30, 340, 50);
     ctx5.bezierCurveTo(320, 5, 250, 20, 250, 50);
-    ctx5.bezierCurveTo(200, 5, 250, 20, 250, 50);
+    ctx5.bezierCurveTo(200, 5, 150, 20, 170, 80);
     ctx5.fillStyle = `salmon`;
     ctx5.lineWidth = 5;
     ctx5.fill();
     ctx5.stroke();
+
+    // canvas 6
+    let canvasEl6 = document.getElementById(`myCanvas6`);
+    let ctx6 = canvasEl6.getContext(`2d`);
+    let gradient = ctx6.createLinearGradient(0, 0, 400, 0);
+    gradient.addColorStop(0, `rebeccapurple`);
+    gradient.addColorStop(0.5, `salmon`);
+    gradient.addColorStop(1, `#fff`);
+    ctx6.fillStyle = gradient;
+    ctx6.fillRect(0, 0, 400, 200);
   </script>
 </html>
