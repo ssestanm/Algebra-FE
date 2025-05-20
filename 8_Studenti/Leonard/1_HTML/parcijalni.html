@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcijanli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      *:focus {
+        outline: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      html {
+        background-color: #fff;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #2e2c28;
+        background-color: #f5f4f3;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 70rem;
+        padding-top: 4rem;
+        margin-inline: auto;
+        margin-bottom: 10rem;
+      }
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #2e2c28;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .kontakt-gumb {
+        background-color: #d9743a;
+        padding: 0.5rem 1rem;
+        color: #fff;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-family: "Roboto Serif", serif;
+      }
+      .about-section {
+        margin-bottom: 10rem;
+        max-width: 70rem;
+        margin-inline: auto;
+      }
+      .content-container {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+      }
+      .content-container > * {
+        flex: 1;
+      }
+      .o-nama {
+        margin-bottom: 6rem;
+      }
+      .kontakt {
+        gap: 0;
+        max-width: 70rem;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+      .kontakt .content-text {
+        padding: 4rem;
+      }
+      .img1 {
+        border-top-left-radius: 48px;
+        box-shadow: -32px -32px 0 #cdc9c3;
+      }
+      .img2 {
+        border-bottom-right-radius: 48px;
+        box-shadow: 32px 32px 0 #2e2c28;
+      }
+      .content-text p {
+        line-height: 1.8;
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-family: "Roboto Serif", serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        background-color: #cdc9c3;
+        padding: 4rem;
+      }
+      label {
+        margin-bottom: 0.5rem;
+      }
+      input,
+      textarea {
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #4d4943;
+        background-color: #cdc9c3;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        color: #2e2c28;
+        caret-color: #2e2c28;
+      }
+      textarea {
+        max-width: 100%;
+        max-height: 37px;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      button {
+        color: #fff;
+        background-color: #2e2c28;
+        border: none;
+        padding: 1rem 2rem;
+        align-self: flex-start;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+      }
+      main {
+        margin-bottom: 10rem;
+      }
+      footer {
+        max-width: 70rem;
+        padding-bottom: 4rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Turistička agencija Avanturist</h1>
+      <nav>
+        <ul>
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Naše djelatnosti</a></li>
+          <li><a href="#" class="kontakt-gumb">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about-section">
+        <div class="content-container o-nama">
+          <div>
+            <img
+              src="../../../2_HTML/Parcijalni/team.jpg"
+              alt="Team"
+              class="img1"
+            />
+          </div>
+          <div class="content-text">
+            <h2>O nama</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              mollitia, quas laboriosam asperiores amet nihil numquam reiciendis
+              consequuntur alias neque incidunt adipisci quaerat. Hic tempora
+              dicta autem esse. Sapiente impedit asperiores illo ducimus nobis
+              accusantium, quidem porro hic fuga odio, nihil eius.
+            </p>
+          </div>
+        </div>
+        <div class="content-container djelatnosti">
+          <div class="content-text">
+            <h2>Naše djelatnosti</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              mollitia, quas laboriosam asperiores amet nihil numquam reiciendis
+              consequuntur alias neque incidunt adipisci quaerat. Hic tempora
+              dicta autem esse. Sapiente impedit asperiores illo ducimus nobis
+              accusantium, quidem porro hic fuga odio, nihil eius.
+            </p>
+          </div>
+          <div>
+            <img
+              src="../../../2_HTML/Parcijalni/adventure.jpg"
+              alt="Adventure"
+              class="img2"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="content-container kontakt">
+          <div>
+            <form>
+              <label for="ime-i-prezime">Ime i prezime:</label>
+              <input type="text" name="ime-i-prezime" id="ime-i-prezime" />
+              <label for="mail">Email:</label>
+              <input type="email" name="mail" id="mail" />
+              <label for="poruka">Poruka:</label>
+              <textarea name="poruka" id="poruka"></textarea>
+              <button type="submit">Pošalji</button>
+            </form>
+          </div>
+          <div class="content-text">
+            <h2>Kontakt</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              mollitia, quas laboriosam asperiores amet nihil numquam reiciendis
+              consequuntur alias neque incidunt adipisci quaerat. Hic tempora
+              dicta autem esse. Sapiente impedit asperiores illo ducimus nobis
+              accusantium, quidem porro hic fuga odio, nihil eius.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Avanturist &copy;</p>
+    </footer>
+  </body>
+</html>
