@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Turistička agencija "Avanturist"</title>
   </head>
   <body>
     <div>
-      <h1>Turistička agencija "Avanturist"</h1>
+      <h1>Turistička agencija &quot;Avanturist&quot;</h1>
       <ul>
         <li><a href="#about">O nama</a></li>
         <li><a href="#djelatnost">Naše djelatnosti</a></li>
@@ -16,7 +16,7 @@
     </div>
     <hr />
     <div id="about">
-      <h1>Turistička agencija Avanturist</h1>
+      <h1>Turistička agencija &quot;Avanturist&quot;</h1>
       <h2>O nama</h2>
       <p>
         Velit sunt cupidatat anim duis ipsum magna aliquip labore. Culpa labore
@@ -61,21 +61,36 @@
         </p>
       </div>
 
-      <div>
+      <form name="obrazac">
         <label for="name">Ime i Prezime:</label> <br />
-        <input type="text" name="name" id="name" maxlength="30" size="30" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          maxlength="30"
+          size="30"
+          required
+        />
         <br /><br />
         <label for="email">Email adresa:</label> <br />
-        <input type="email" name="email" id="email" maxlength="30" size="30" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          maxlength="30"
+          size="30"
+          required
+        />
         <br /><br />
         <label for="poruka">Poruka:</label> <br />
         <textarea name="poruka" id="poruka" rows="10" cols="50"></textarea>
         <br /><br />
-        <button type="submit">Pošalji poruku</button>
-        <br />
-        <hr />
-        <br />
-
+        <button type="submit" name="submit">Pošalji poruku</button>
+      </form>
+      <br />
+      <hr />
+      <br />
+      <div>
         <i>Avanturist &#169; 2019.</i>
         <br />
         <img src="../Parcijalni/mail.png" alt="mail" />
