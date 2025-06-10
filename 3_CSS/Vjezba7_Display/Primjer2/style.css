@@ -21,6 +21,9 @@ p{border:1px solid #CCC;
   box-sizing:border-box;
   display:inline-block;
   margin:0;
+  width:24%;
+}
+
+p:not(:first-of-type){border:1px solid #CCC;
   margin-left:-4px; /* inline-block margin issue */
-  width:25%;
 }
