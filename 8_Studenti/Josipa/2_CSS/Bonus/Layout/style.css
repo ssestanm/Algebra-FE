@@ -54,4 +54,19 @@ ul li:hover {
 
 .grid {
     display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: auto 2fr 1fr; */
+    /* grid-template-columns: 100px 2fr 1fr; */
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.grid-item {
+    border: 1px solid red;
+}
+
+.grid-item .box {
+    margin: 10px auto;
 }
