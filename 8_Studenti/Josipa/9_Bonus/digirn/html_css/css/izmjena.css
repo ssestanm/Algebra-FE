@@ -8,27 +8,15 @@ section h1 {
 
 textarea {
   display: block;
-  font: inherit;
+  font-family: inherit;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 4px;
-  border: 1px solid var(--primary);
+  border: 1.5px solid var(--primary);
   border-radius: 2px;
   outline: none;
-}
-
-input:active, input:focus, textarea:active, textarea:focus {
-  border: 2px solid var(--inversePrimary);
-}
-
-.container {
-  width: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 0.2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 button {
@@ -42,6 +30,31 @@ button {
 
 button:hover {
   color: var(--inversePrimary);
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 2px solid var(--outline);
+}
+
+.container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  display: inline-block;
 }
 
 .button-container {
