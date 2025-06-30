@@ -1,9 +1,9 @@
 // @import
 
-@import "abstracts/mixins";
-@import "base/reset";
-@import "base/colors";
-@import "base/typography";
+@import "mixins";
+@import "reset";
+@import "colors";
+@import "typography";
 
 body {
   color: $color2;
