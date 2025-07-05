@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* +++++++++++++++ PRIMJER 1 +++++++++++++++ */
+      /*
+      h1 {
+        color: indigo;
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: navy;
+        margin-bottom: 32px;
+      }
+      h3 {
+        color: sienna;
+        margin-bottom: 24px;
+      }
+      p {
+        color: purple;
+        margin-bottom: 16px;
+      }
+      */
+
+      /* +++++++++++++++ PRIMJER 6 +++++++++++++++ */
+      /*
+      h1 {
+        color: indigo;
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: navy;
+        margin-bottom: 32px;
+      }
+      h3 {
+        color: sienna;
+        margin-bottom: 24px;
+      }
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+      header {
+        color: salmon;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      p:first-child {
+        text-transform: uppercase;
+        text-decoration: underline wavy red;
+        text-underline-offset: 5px;
+      }
+      p:last-child {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background-color: blueviolet;
+        padding: 8px 16px;
+        display: inline-block;
+        color: aliceblue;
+        border-radius: 1000px;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(122 0 237);
+      }
+      p:nth-child(2n + 1) {
+        text-decoration: line-through red dotted;
+      }
+      p:first-of-type {
+        font-weight: 900;
+      }
+      footer {
+        color: orangered;
+      }
+      div p {
+        background-color: indigo;
+      }
+      *::selection {
+        background-color: yellow;
+      }
+      h1 + p {
+        color: teal;
+      }
+      h1 ~ p {
+        color: violet;
+      }
+      */
+
+      /* +++++++++++++++ PRIMJER 7 +++++++++++++++ 
+      body {
+        color: #292929;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 18px;
+        line-height: -1;
+      }
+      section p {
+        color: gold;
+        background-color: indianred;
+        margin-bottom: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 1000px;
+      }
+      footer section p {
+        font-family: monospace;
+      }
+      section > p {
+        text-decoration: 14px line-through orangered;
+        speak-as: spell-out;
+        text-align: justify;
+        text-justify: inter-character;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <h1 style="color: salmon">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h1>
+    <h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h2>
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h3>
+    <p style="color: tomato">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tenetur
+      nostrum veritatis error unde, architecto, nisi similique at debitis
+      quisquam deserunt quidem! Deleniti aliquam, quod blanditiis est quo quos
+      recusandae, officiis molestiae accusamus similique provident dicta fuga
+      tenetur. Tenetur, fugit?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tenetur
+      nostrum veritatis error unde, architecto, nisi similique at debitis
+      quisquam deserunt quidem! Deleniti aliquam, quod blanditiis est quo quos
+      recusandae, officiis molestiae accusamus similique provident dicta fuga
+      tenetur. Tenetur, fugit?
+    </p>
+    <header>
+      <h2>Primjer 6</h2>
+      <p>Odlomak 1 - zaglavlje</p>
+    </header>
+    <main>
+      <section>
+        <h1>Sekcija 1</h1>
+        <div>
+          <p>Odlomak1 - sekcija 1</p>
+        </div>
+        <article>
+          <p>Odlomak 1 - artikl 1</p>
+          <p>Odlomak 2 - artikl 1</p>
+        </article>
+        <p>Odlomak 1 - sekcija 1</p>
+        <p>Odlomak 2 - sekcija 1</p>
+        <p>Odlomak 3 - sekcija 1</p>
+        <p>Odlomak 4 - sekcija 1</p>
+        <p>Odlomak 5 - sekcija 1</p>
+      </section>
+      <section>
+        <h2>Naslov sekcije - sekcija 2</h2>
+        <p>Odlomak 1 - sekcija 2</p>
+        <p>Odlomak 2 - sekcija 2</p>
+        <p>Odlomak 3 - sekcija 2</p>
+        <p>Odlomak 4 - sekcija 2</p>
+        <p>Odlomak 5 - sekcija 2</p>
+      </section>
+      <section>
+        <div>
+          <div>
+            <p>Odlomak 1 - div</p>
+            <p>Odlomak 2 - div</p>
+            <p>Odlomak 3 - div</p>
+          </div>
+        </div>
+      </section>
+      <article>
+        <h1>Objava</h1>
+        <p>Odlomak 1 - article 2</p>
+        <p>Odlomak 2 - article 2</p>
+        <p>Odlomak 3 - article 2</p>
+        <p>Odlomak 4 - article 2</p>
+        <p>Odlomak 5 - article 2</p>
+      </article>
+      <div>
+        <ul>
+          <li>
+            <a href="">
+              <p>ODLOMAK U NESTANIM DIVOVIMA</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <h1>Podnozje</h1>
+      <section>
+        <h1>Sekcija 3</h1>
+        <p>Odlomak 1 - sekcija 3</p>
+        <p>Odlomak 2 - sekcija 3</p>
+        <p>Odlomak 3 - sekcija 3</p>
+        <p>Odlomak 4 - sekcija 3</p>
+        <p>Odlomak 5 - sekcija 3</p>
+      </section>
+      <section>
+        <h1>Sekcija 4</h1>
+        <p>Odlomak 1 - sekcija 4</p>
+        <p>Odlomak 2 - sekcija 4</p>
+        <p>Odlomak 3 - sekcija 4</p>
+        <p>Odlomak 4 - sekcija 4</p>
+      </section>
+      <p>Odlomak 1 - footer</p>
+      <p>Odlomak 2 - footer</p>
+      <p>Odlomak 3 - footer</p>
+    </footer>
+    <section class="display">
+      <h1>DISPLAY</h1>
+      <ul class="display-list">
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+      </ul>
+      <div class="display-div">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+      </div>
+    </section>
+    <section class="position">
+      <h1>POSITION</h1>
+      <h2>Example 1</h2>
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <h2>Example 2</h2>
+      <div class="box3">
+        box3
+        <div class="box4">box4</div>
+      </div>
+      <div class="frame">
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+      </div>
+      <div class="box7">Box7</div>
+      <div class="box8">Box8</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit
+        rerum explicabo sapiente aliquam, ad maiores facere deserunt, fugiat nam
+        sit doloribus totam necessitatibus eligendi pariatur labore vitae iusto
+        sequi ex placeat debitis obcaecati cum expedita. Doloremque voluptatibus
+        architecto ullam sequi corrupti accusamus et, odit magnam maxime
+        consequuntur vel voluptate molestiae accusantium cupiditate corporis
+        asperiores explicabo tempora fugiat, similique atque alias nemo placeat
+        non unde? Quae aliquid voluptas facilis, exercitationem in id tempora
+        ipsa unde accusantium, quasi ducimus voluptatem soluta numquam accusamus
+        laboriosam? Tempora suscipit, tempore ipsa rerum dolorum ea neque ipsum
+        magni odit. Voluptatum fugiat voluptates sapiente itaque sint fuga
+        inventore nostrum asperiores aut cupiditate, dolor exercitationem veniam
+        pariatur ratione, iste quaerat cumque est modi adipisci odit. Impedit
+        veritatis, ab cumque rem earum laborum quas aperiam autem iusto alias.
+        Vel ad nam consequuntur, harum maiores consequatur eos soluta suscipit,
+        eligendi eaque similique inventore nemo! Fuga asperiores fugiat dolores
+        reprehenderit aperiam maiores architecto? Tenetur, minima. Culpa illum
+        dignissimos dolores numquam nemo ducimus architecto pariatur ullam
+        corrupti recusandae sed hic quia quisquam quidem et eligendi natus
+        explicabo, sit cupiditate vel aliquid cumque officia. Nesciunt nostrum
+        ut eum odio eos nobis, praesentium illum exercitationem neque, voluptate
+        accusantium suscipit corporis consequatur nam ipsam, consequuntur
+        possimus veniam doloremque voluptatum? Magnam vero quibusdam praesentium
+        odit nulla delectus aliquid aut eum incidunt quam accusamus, repellendus
+        maiores. Ex fuga reiciendis enim debitis quia omnis atque beatae quod
+        illum nobis suscipit eaque voluptate dolorum vitae adipisci tempore, a
+        quae possimus tenetur quis ad rerum eum voluptatem ab? Sit nam, expedita
+        optio ut distinctio accusantium, tempore inventore saepe omnis quisquam
+        qui dolor perspiciatis, ex dignissimos! Officiis, explicabo? Itaque esse
+        quos labore laborum voluptas ad doloribus maiores ducimus eligendi cum
+        rerum, voluptate recusandae, soluta ullam modi fugit quisquam fugiat
+        quasi deleniti in ut iure repellat hic deserunt! Laborum non error
+        deserunt et atque debitis? Aspernatur beatae laudantium mollitia sunt
+        nobis eveniet cupiditate numquam dicta dolorem ratione consectetur amet
+        nam aut incidunt tempora, at nesciunt harum nisi ipsam maxime quisquam
+        laboriosam temporibus similique neque. Ipsa corrupti maxime ab veritatis
+        aut dolorum ipsam, nemo facere unde et odit debitis voluptatum, beatae
+        sequi natus vel? Quibusdam nobis, commodi sed optio aliquid distinctio
+        soluta consequatur aliquam quia libero numquam dolorem voluptas
+        accusantium perspiciatis in exercitationem vitae? Vel aperiam earum fuga
+        ad recusandae nesciunt temporibus quam dolorem optio reprehenderit,
+        neque blanditiis nulla eos ipsam? Dignissimos distinctio sit obcaecati
+        cum est impedit, quo, fugit nihil dolore sunt et commodi rerum. Quae
+        vero quas illo deserunt sit. Soluta ut id numquam, assumenda iure
+        libero! Possimus unde alias, consequatur, temporibus consectetur, ea
+        inventore iusto animi dicta vero sint aliquam assumenda eius! Ex natus
+        sunt cumque molestias dolores? Consectetur obcaecati dolores aperiam
+        totam temporibus adipisci possimus inventore iste aspernatur, nihil
+        debitis sint repellat laudantium nulla hic et quaerat natus, ratione
+        harum repellendus cupiditate eius iure nobis fuga. Nulla, consequuntur.
+        Saepe consectetur commodi magnam iste veniam, similique praesentium et.
+        Iste, aliquam! Magnam placeat ullam cupiditate architecto non quo error
+        rem natus commodi corporis, delectus, sint minima quaerat id facere
+        illo!
+      </p>
+    </section>
+  </body>
+</html>
