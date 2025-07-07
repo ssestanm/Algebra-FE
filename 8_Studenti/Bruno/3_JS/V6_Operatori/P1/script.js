@@ -29,7 +29,7 @@ totalPrice.toFixed(2);
 console.log("Total:", totalPrice);
 console.log("Total:", totalPrice.toFixed(2));
 
-///////
+/////////////////////////////////
 var logged_in = 1;
 if (logged_in === true) {
 }
