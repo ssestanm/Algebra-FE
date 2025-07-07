@@ -8,7 +8,7 @@ section h1 {
 
 textarea {
   display: block;
-  font: inherit;
+  font-family: inherit;
 }
 
 input,
@@ -30,6 +30,11 @@ button {
 
 button:hover {
   color: var(--inversePrimary);
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
 }
 
 input:active,
