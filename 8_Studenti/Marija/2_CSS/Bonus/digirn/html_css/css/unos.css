@@ -36,7 +36,7 @@ input:active,
 input:focus,
 textarea:active,
 textarea:focus {
-  border: 2px solid var(--inversePrimary);
+  border: 2px solid var(--outline);
 }
 
 .container {

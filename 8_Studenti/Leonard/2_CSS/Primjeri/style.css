@@ -8,6 +8,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: #333;
+  background-color: #eee;
 }
 
 section {
@@ -119,10 +120,43 @@ div.box8 {
   position: fixed;
   bottom: 100px;
   right: 100px;
+  opacity: 10%;
 }
 
 .box8 {
   position: sticky;
   bottom: 100px;
   left: 100px;
+}
+
+/* ANIMATIONS ------------------------------------------------------------------ */
+
+.circle {
+  height: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: black;
+  text-align: center;
+  align-content: center;
+  border: 5px solid teal;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  position: relative;
+}
+
+@keyframes animation1 {
+  0% {
+    left: 0;
+    background: black;
+  }
+  100% {
+    left: 1000px;
+    background: white;
+  }
+}
+
+.circle:first-of-type {
+  animation: animation1 5s linear;
 }
