@@ -10,7 +10,7 @@ for (var i = 0; i < names.length; i++) {
 names.push("Bruno");
 console.log(names);
 
-// 3. Koristeći petlju, napravite iteraciju kroz ovaj niz te nakon išto ispišete "Jane" izađite iz petlje.
+// 3. Koristeći petlju, napravite iteraciju kroz ovaj niz te nakon što ispišete "Jane" izađite iz petlje.
 
 for (var element of names) {
   console.log(element);
