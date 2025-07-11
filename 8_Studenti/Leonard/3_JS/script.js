@@ -14,7 +14,6 @@ for (let i = 0; i < 4; i++) {
   }
 }
 console.log(var1);
-*/
 
 let firstname = `Leonard`;
 let surName = `Pocrncic`;
@@ -35,3 +34,68 @@ for (let i = 1; i <= 20; i++) {
   if (i % 2 === 0) console.log(`${i} je paran broj.`);
   else console.log(`${i} je neparan broj.`);
 }
+
+
+var words = ["quickest", "brown", "fox", "jumps", "over", "the", "lazy", "dog"];
+
+const retrunMax = (arr) =>
+  arr.reduce((acc, el) => (el.length > acc.length ? el : acc), ``);
+
+console.log(retrunMax(words));
+*/
+
+// 1. Kreiraj objekt koji reprezentira neki specifični auto, sa bar 8 svojstava, od kojih su 3 funkcije (npr. ubrzaj, zakoci itd.), a jedna je također objekt. Probajte referencirati druge vrijednosti objekta u funkcijama. Svaka funkcija mora primati argumente i vracati neku vrijednost.
+// 2. Pozovite funkcije svog objekta sa argumentima i ispisite rezultat.
+// 3. Sa petljom pristupi svim brojivim svojstvima tvog auto objekta i ispiši vrijednosti u konzoli zajedno sa njihovim imenima (kljucevima) (npr. ime: Ivan)
+// 4. Ispiši u konzoli razumljivu rečenicu koja uključuje bar 2 svojstva tvog objekta.
+// 5. Pretvori svoj objekt u JSON string.
+
+// 1.
+const auto = {
+  marka: "Toyota",
+  model: "Supra",
+  godina: 2020,
+  boja: "crvena",
+  brzina: 0,
+  motor: {
+    snaga: 340,
+    zapremina: 3.0,
+  },
+
+  ubrzaj(sekundi) {
+    const ubrzanje = this.motor.snaga * 0.05;
+    this.brzina += ubrzanje * sekundi;
+    return `Auto je ubrzao i sada vozi ${this.brzina.toFixed(1)} km/h.`;
+  },
+
+  zakoci(sila) {
+    this.brzina -= sila * 5;
+    if (this.brzina < 0) this.brzina = 0;
+    return `Auto je zakočio i sada vozi ${this.brzina.toFixed(1)} km/h.`;
+  },
+
+  promijeniBoju(novaBoja) {
+    const staraBoja = this.boja;
+    this.boja = novaBoja;
+    return `Auto je promijenio boju iz ${staraBoja} u ${this.boja}.`;
+  },
+};
+
+// 2.
+console.log(auto.ubrzaj(10));
+console.log(auto.zakoci(10));
+console.log(auto.promijeniBoju(`crna`));
+
+// 4.
+for (let [key, value] of Object.entries(auto)) {
+  if (typeof value === `number`) console.log(`Key: ${key}, Value: ${value}`);
+}
+
+// 5.
+console.log(
+  `${auto.marka} ${auto.model}, ${auto.boja} boja, ${auto.godina}. godište.`
+);
+
+// 6.
+let autoJason = JSON.stringify(auto);
+console.log(autoJason);
