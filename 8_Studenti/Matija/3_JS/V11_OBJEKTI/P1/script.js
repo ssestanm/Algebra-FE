@@ -38,5 +38,6 @@ for (key in auto) {
   }
 }
 
+
 console.log("Boja mog " + auto.brend.tip + " auta je " + auto.boja);
 console.log(JSON.stringify(auto));
