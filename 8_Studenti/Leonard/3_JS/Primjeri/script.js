@@ -42,7 +42,6 @@ const retrunMax = (arr) =>
   arr.reduce((acc, el) => (el.length > acc.length ? el : acc), ``);
 
 console.log(retrunMax(words));
-*/
 
 // 1. Kreiraj objekt koji reprezentira neki specifični auto, sa bar 8 svojstava, od kojih su 3 funkcije (npr. ubrzaj, zakoci itd.), a jedna je također objekt. Probajte referencirati druge vrijednosti objekta u funkcijama. Svaka funkcija mora primati argumente i vracati neku vrijednost.
 // 2. Pozovite funkcije svog objekta sa argumentima i ispisite rezultat.
@@ -99,3 +98,32 @@ console.log(
 // 6.
 let autoJason = JSON.stringify(auto);
 console.log(autoJason);
+
+// 1. Napisati funkciju koja provjerava jesu li svi znakovi jedinstveni
+
+let password = `0123456789`;
+
+const isUnique = (string) => {
+  return new Set(string).size === string.length;
+};
+console.log(isUnique(password));
+
+// 2. Napisati funkciju koja provjerava jesu li svi znakovi brojevi
+
+const isNumber = function (string) {
+  return !Number.isNaN(Number(string));
+};
+
+console.log(isNumber(password));
+
+// 3. Napisati funkciju koja prima password i skracuje ju na 10 znakova
+const shortenPassword = function (str) {
+  return str.slice(0, 10);
+};
+console.log(shortenPassword(password));
+*/
+
+// DOM manipulation
+console.log(window.innerWidth);
+const odgovor = confirm(`Prihvacate li?`) ? `Da` : `Ne`;
+console.log(odgovor);
