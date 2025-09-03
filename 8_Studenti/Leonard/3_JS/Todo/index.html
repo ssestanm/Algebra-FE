@@ -21,6 +21,17 @@
             <ion-icon name="filter-outline"></ion-icon>
             <span>Filter</span>
           </button>
+          <div class="filter-group hidden-filters">
+            <button class="btn btn--actions btn--all">
+              <span>All</span>
+            </button>
+            <button class="btn btn--actions btn--unfinished">
+              <span>Unfinished</span>
+            </button>
+            <button class="btn btn--actions btn--finished">
+              <span>Finished</span>
+            </button>
+          </div>
           <button class="btn btn--actions btn--trash">
             <ion-icon name="trash-outline"></ion-icon>
             <span>Clear all</span>
@@ -45,15 +56,15 @@
         </thead>
         <tbody>
           <tr>
-            <td>No tasks</td>
+            <td class="no-tasks-text">No tasks</td>
           </tr>
         </tbody>
       </table>
       <button></button>
     </main>
-    <div class="toast">
+    <div class="toast hidden-toast">
       <ion-icon name="warning-outline"></ion-icon>
-      <span class="toast-message">Please enter task</span>
+      <span class="toast-message">Please enter a task</span>
     </div>
     <script src="script.js"></script>
     <script

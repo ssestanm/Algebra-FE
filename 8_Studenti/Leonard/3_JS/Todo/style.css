@@ -15,6 +15,7 @@ body {
   padding: 4rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 input,
@@ -76,7 +77,8 @@ main {
 }
 
 .btn--filter,
-.btn--trash {
+.btn--trash,
+.filter-group {
   border: 1px solid #868e96;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgb(0, 0, 0, 0.07);
@@ -84,6 +86,50 @@ main {
 
 .btn--add {
   border-left: 1px solid #868e96;
+  background: none;
+}
+
+.btn--check {
+  border: 1px solid #868e96;
+  border-radius: 4px;
+  padding: 0.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked {
+  background-color: #0b7285;
+  border: 1px solid #868e9600;
+}
+
+.checkmark-icon {
+  color: #f8f9fa;
+}
+
+.unchecked {
+  opacity: 0;
+}
+
+.btn--filter {
+  position: relative;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 172px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.filter-group > *:hover {
+  background-color: #dee2e6;
+}
+
+.hidden-filters {
+  display: none;
 }
 
 h1 {
@@ -122,6 +168,9 @@ td,
 th {
   padding: 0.5rem 1rem;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 tbody tr:nth-child(even) {
@@ -134,4 +183,20 @@ tbody tr:nth-child(even) {
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.07);
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background-color: #c92a2a;
+  color: #f8f9fa;
+  transition: all 400ms ease;
+}
+
+.hidden-toast {
+  transform: translateY(100px);
+}
+
+.no-tasks-text {
+  color: #868e96;
 }
