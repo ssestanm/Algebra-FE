@@ -69,15 +69,14 @@ body {
 }
 
 main {
-  @include prilagodjvanje;
-
   .sunce {
     position: relative;
+    left: 43vw;
     z-index: 0;
     margin-top: 55px;
     background-color: $color1;
-    width: 300px;
-    height: 300px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     box-shadow: $color1 0 0 50px;
     animation: animacijaSunca 3.6s linear forwards;
@@ -97,11 +96,12 @@ footer {
   color: $font1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
-  font-size: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 20vh;
+  font-size: 3vw;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 @media (max-width: 479px) {
