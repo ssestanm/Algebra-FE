@@ -1,30 +1,53 @@
+// Povezivanje elemenata u DOM
+const input = document.querySelector(".search-input");
+const searchButton = document.querySelector("button");
 const list = document.querySelector("ul");
-const input = document.querySelector(".input");
+const spinner = document.querySelector(".spinner");
 
+// Dodavanje funkcije za loading spinner
+const setLoading = function (on) {
+  if (on) {
+    spinner.classList.remove("hidden");
+    if (searchButton) searchButton.disabled = true;
+  } else {
+    spinner.classList.add("hidden");
+    if (searchButton) searchButton.disabled = false;
+  }
+};
+
+// Dodavanje handler funkcije na Button
+searchButton.addEventListener("click", getData);
+
+// Kreiranje getData funkcije, brisanje starih rezultata i prekidanje ako je polje prazno
 async function getData() {
   list.innerHTML = "";
-
   const term = input.value.trim();
-  if (!term) return;
 
-  const response = await fetch(
-    `https://itunes.apple.com/search?term=${encodeURIComponent(
-      term
-    )}&entity=musicTrack&limit=20`
-  );
+  if (!term) {
+    list.innerHTML = "Unesi nesto u trazilicu";
+    return;
+  }
 
-  //   if (!response.ok) throw new Error("Greska" + response.status);
+  // Paljenje loading spinnera
+  setLoading(true);
 
-  const data = await response.json();
-  //   console.log(data.results);
+  // Sastavi URL sigurno sa searchParams
+  const url = new URL("https://itunes.apple.com/search");
+  url.searchParams.set("term", term);
+  url.searchParams.set("entity", "musicTrack");
+  url.searchParams.set("limit", "20");
 
+  // Fetch + provjere + JSON
+  const req = await fetch(url);
+  if (!req) throw new Error(`HTTP ${req.status}`);
+  const data = await req.json();
+
+  // Dodaj LI za svaku pjesmu
   data.results.forEach((track) => {
     const li = document.createElement("li");
-    li.textContent = `${track.artistName}: ${track.trackName}`;
+    li.innerHTML = `${track.artistName}: ${track.trackName}`;
     list.appendChild(li);
   });
+  // Gasenje loading spinnera
+  setLoading(false);
 }
-
-input.addEventListener("keydown", (e) => {
-  getData();
-});

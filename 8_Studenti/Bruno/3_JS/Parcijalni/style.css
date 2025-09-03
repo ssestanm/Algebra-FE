@@ -31,3 +31,22 @@ ul li {
   width: 70vw;
   background-color: rgb(203, 203, 203);
 }
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: solid 13px black;
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
