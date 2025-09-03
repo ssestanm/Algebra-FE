@@ -18,7 +18,7 @@ const setLoading = function (on) {
 // Dodavanje handler funkcije na Button
 searchButton.addEventListener("click", getData);
 
-// Kreiranje getData funkcije, brisanje starih rezultata i prekidanje ako je polje prazno
+// Kreiranje getData funkcije, brisanje starih rezultata i prekidanje funkcije ako je input prazan
 async function getData() {
   list.innerHTML = "";
   const term = input.value.trim();
@@ -31,7 +31,7 @@ async function getData() {
   // Paljenje loading spinnera
   setLoading(true);
 
-  // Sastavi URL sigurno sa searchParams
+  // Sastavi URL sa searchParams svojstvom
   const url = new URL("https://itunes.apple.com/search");
   url.searchParams.set("term", term);
   url.searchParams.set("entity", "musicTrack");
@@ -48,6 +48,7 @@ async function getData() {
     li.innerHTML = `${track.artistName}: ${track.trackName}`;
     list.appendChild(li);
   });
+
   // Gasenje loading spinnera
   setLoading(false);
 }
