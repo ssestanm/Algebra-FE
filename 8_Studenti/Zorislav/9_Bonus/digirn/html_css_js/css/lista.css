@@ -17,6 +17,11 @@ table tbody tr:hover {
   background-color: var(--inversePrimary);
 }
 
+#nema-naloga {
+  display: none;
+  margin: 10px auto;
+}
+
 /* Sirina ekrana manje od 899px */
 @media (max-width: 899px) {
 
