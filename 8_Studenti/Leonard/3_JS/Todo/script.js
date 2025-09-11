@@ -17,6 +17,8 @@ let toDoTasks = [];
 let displayedTasks;
 let currentPage = 0;
 let paginationButtonElements = [];
+let crossBtns = [];
+let filterState = `all`;
 
 // DISPLAY TABLE DATA
 const displayTableData = function () {
@@ -27,7 +29,7 @@ const displayTableData = function () {
     tableBody.insertAdjacentHTML(
       `beforeend`,
       `<tr>
-        <td>${i + 1 + currentPage * 5}.</td>
+        <td>${el.taskID}.</td>
         <td>${el.taskName}</td>
           <td>
             <button class="btn btn--check ${el.checked ? `checked` : ``}">
@@ -67,10 +69,17 @@ const markingTasksDone = function () {
 
 // UPDATE UI
 const updateUI = function (tasks) {
+  let filteredTasks = tasks;
+  if (filterState === `all`) filteredTasks = tasks;
+  else if (filterState === `unfinished`)
+    filteredTasks = tasks.filter((el) => !el.checked);
+  else if (filterState === `finished`)
+    filteredTasks = tasks.filter((el) => el.checked);
+
   // PAGINATION
-  let pageNumbers = Math.ceil(toDoTasks.length / 5);
+  let pageNumbers = Math.ceil(filteredTasks.length / 5);
   let pages = Array.from({ length: pageNumbers }, (_, i) => i + 1);
-  displayedTasks = toDoTasks.slice(5 * currentPage, 5 * currentPage + 5);
+  displayedTasks = filteredTasks.slice(5 * currentPage, 5 * currentPage + 5);
   if (pages.length > 1) {
     pagination.classList.remove(`hidden-pagination`);
   } else pagination.classList.add(`hidden-pagination`);
@@ -89,23 +98,42 @@ const updateUI = function (tasks) {
   paginationButtonElements.forEach(function (el) {
     el.addEventListener(`click`, function () {
       currentPage = Number(el.textContent) - 1;
-      displayedTasks = toDoTasks.slice(5 * currentPage, 5 * currentPage + 5);
+      displayedTasks = filteredTasks.slice(
+        5 * currentPage,
+        5 * currentPage + 5
+      );
       displayTableData();
       markingTasksDone();
+      removeTask();
     });
   });
 
   // DISPLAY DATA IN THE TABLE
   displayTableData();
   markingTasksDone();
-
-  let crossBtns = Array.from(document.querySelectorAll(`.btn--cross`));
+  removeTask();
 };
+
+// REMOVING TASKS
+function removeTask() {
+  crossBtns = Array.from(document.querySelectorAll(`.btn--cross`));
+  for (let i = crossBtns.length - 1; i >= 0; i--) {
+    crossBtns.at(i).addEventListener(`click`, function () {
+      toDoTasks.splice(i + currentPage * 5, 1);
+      toDoTasks.map((el, i) => (el.taskID = i + 1));
+      updateUI(toDoTasks);
+    });
+  }
+}
 
 // ADD TASKS
 addBtn.addEventListener(`click`, function () {
   if (inputElement.value) {
-    toDoTasks.push({ taskName: inputElement.value, checked: false });
+    toDoTasks.push({
+      taskID: toDoTasks.length + 1,
+      taskName: inputElement.value,
+      checked: false,
+    });
     updateUI(toDoTasks);
     inputElement.value = ``;
   } else {
@@ -126,13 +154,19 @@ filterBtn.addEventListener(`click`, function () {
 });
 
 filterAllBtn.addEventListener(`click`, function () {
+  filterState = `all`;
+  currentPage = 0;
   updateUI(toDoTasks);
 });
 
 filterUnfinishedBtn.addEventListener(`click`, function () {
-  updateUI(toDoTasks.filter((el) => !el.checked));
+  filterState = `unfinished`;
+  currentPage = 0;
+  updateUI(toDoTasks);
 });
 
 filterFinishedBtn.addEventListener(`click`, function () {
-  updateUI(toDoTasks.filter((el) => el.checked));
+  filterState = `finished`;
+  currentPage = 0;
+  updateUI(toDoTasks);
 });
