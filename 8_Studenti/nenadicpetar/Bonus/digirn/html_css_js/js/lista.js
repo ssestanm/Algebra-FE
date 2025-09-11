@@ -103,10 +103,10 @@ function main() {
   }
 
 
-  function ucitajNaloge(){
+  async function ucitajNaloge(){
     const answer = confirm("Učitaj naloge iz baze?");
     if(answer){
-      let nalozi = ucitajFirebase();
+      let nalozi = await ucitajFirebase();
       localStorage.setItem("tmpNalozi", JSON.stringify(nalozi));
     }else{
       //...
@@ -121,7 +121,7 @@ function main() {
     if(tmpNalozi.length !== 0){
       const answer = confirm("Spremi naloge u bazu?");
       if(answer){
-        zapisiFirebase()
+        zapisiFirebase(tmpNalozi);
       }
     }else{
       alert("Nema naloga za spremanje!");
