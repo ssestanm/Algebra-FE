@@ -5,10 +5,9 @@
   --inversePrimary: #f4b2e3;
   --onSurface: #201a1e;
   --outline: #80747b;
-  --tertiaryContainer: #FFDBCF;
-  --surfaceVariant: #EEDEE7;
-  --outlineVariant: #D2C2CB;
-
+  --tertiaryContainer: #ffdbcf;
+  --surfaceVariant: #eedee7;
+  --outlineVariant: #d2c2cb;
 }
 
 /* Svi elementi */
@@ -130,14 +129,12 @@ aside a:hover {
   margin: 6px 0;
 }
 
-
-
 /* Sirina ekrana manje od 899px */
 @media (max-width: 899px) {
   header nav ul {
     display: none;
   }
-  
+
   aside {
     display: inline-block;
   }
@@ -146,7 +143,7 @@ aside a:hover {
     display: inline-block;
     cursor: pointer;
   }
-/* 
+  /* 
   .table-col-hide {
     display: none;
   } */

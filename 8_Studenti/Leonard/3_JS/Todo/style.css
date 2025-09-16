@@ -36,9 +36,6 @@ input {
   padding-inline: 1rem;
 }
 
-main {
-}
-
 .actions {
   display: flex;
   align-items: center;
@@ -147,6 +144,7 @@ table {
   text-align: center;
   border-spacing: 0;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 thead {
@@ -199,4 +197,26 @@ tbody tr:nth-child(even) {
 
 .no-tasks-text {
   color: #868e96;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn--pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #868e96;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.07);
+}
+
+.hidden-pagination {
+  display: none;
 }
